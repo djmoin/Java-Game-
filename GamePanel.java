@@ -23,6 +23,9 @@ public class GamePanel extends JPanel implements Runnable{
 		this.setDoubleBuffered(true);
 	}
 	
+	
+	
+	
 	public void startGameThread() {
 		gameThread = new Thread(this);
 		gameThread.start();
