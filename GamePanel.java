@@ -2,6 +2,9 @@ package Main;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Graphics;
+import java.awt.Graphics2D;
+
 import javax.swing.JPanel;
 
 public class GamePanel extends JPanel implements Runnable{
@@ -9,11 +12,14 @@ public class GamePanel extends JPanel implements Runnable{
 	final int originalTileSize = 16; //16X16 tiles
 	final int scale = 3;
 	
-	final int titleSize = originalTileSize*scale; //48X48 tile
+	final int tileSize = originalTileSize*scale; //48X48 tile
 	final int maxScreenCol = 16;
 	final int maxScreenRow = 12;
-	final int ScreenWidth = titleSize*maxScreenCol;	//768 pixels
-	final int ScreenHeight = titleSize*maxScreenRow;	//576 pixels
+	final int ScreenWidth = tileSize*maxScreenCol;	//768 pixels
+	final int ScreenHeight = tileSize*maxScreenRow;	//576 pixels
+	
+	KeyHandler KH = new KeyHandler();
+	
 	
 	Thread gameThread;
 	
@@ -21,10 +27,9 @@ public class GamePanel extends JPanel implements Runnable{
 		this.setPreferredSize(new Dimension(ScreenWidth, ScreenHeight));
 		this.setBackground(Color.black);
 		this.setDoubleBuffered(true);
+		this.addKeyListener(KH);
+		this.setFocusable(true);
 	}
-	
-	
-	
 	
 	public void startGameThread() {
 		gameThread = new Thread(this);
@@ -41,7 +46,7 @@ public class GamePanel extends JPanel implements Runnable{
 	}
 	public void update(){
 	}
-	public void paintCOmponent(Graphics g){
+	public void paintComponent(Graphics g){
 		super.paintComponent(g);
 		Graphics2D g2 = (Graphics2D)g;
 		
