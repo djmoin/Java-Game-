@@ -7,7 +7,7 @@ import java.awt.Graphics2D;
 
 import javax.swing.JPanel;
 
-public class GamePanel extends JPanel implements Runnable{
+public class GamePanel extends JPanel extends KeyHandler implements Runnable{
 	
 	final int originalTileSize = 16; //16X16 tiles
 	final int scale = 3;
