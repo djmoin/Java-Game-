@@ -26,9 +26,7 @@ public class KeyHandler implements KeyListener {
 		}
 		if(code==KeyEvent.VK_A) {
 			leftPrssd=true;
-		}
-		
-	
+		}		
 	}
 
 	@Override
