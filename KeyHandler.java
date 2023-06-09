@@ -9,7 +9,7 @@ public class KeyHandler implements KeyListener {
 	@Override
 	public void keyTyped(KeyEvent e) {
 	}
-
+//pressing key
 	@Override
 	public void keyPressed(KeyEvent e) {
 	
@@ -28,7 +28,7 @@ public class KeyHandler implements KeyListener {
 			leftPrssd=true;
 		}		
 	}
-
+//releasing the key 
 	@Override
 	public void keyReleased(KeyEvent e) {
 		
