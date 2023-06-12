@@ -27,10 +27,11 @@ public class GamePanel extends JPanel implements Runnable{
 	
 	Thread gameThread;
 	
-	//Player Position 
+	//Player Pos
 	int playerX=100;
 	int playerY=100;
 	int playerSpeed=5;
+	
 	
 	public GamePanel() {
 		this.setPreferredSize(new Dimension(ScreenWidth, ScreenHeight));
